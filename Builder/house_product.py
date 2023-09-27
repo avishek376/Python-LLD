@@ -12,5 +12,5 @@ class House:
     def construction(self):
         return f"This is a {self.wall_material}" \
                f"{self.building_type} with " \
-               f"{self.no_of_doors} doors and"\
+               f"{self.no_of_doors} doors and "\
                 f"{self.no_of_windows} windows"
