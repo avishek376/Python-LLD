@@ -4,7 +4,7 @@ from house_product import House
 
 class HouseBuilder(IHouseBuilder):
     """
-    The concrete representation of House Builder class
+    The concrete representation of House Builder Design Pattern class
     """
 
     def __init__(self):

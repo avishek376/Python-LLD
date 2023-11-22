@@ -3,7 +3,7 @@ from abc import abstractmethod, ABC
 
 class IHouseBuilder(ABC):
     """
-    Interface representation of House Builder
+    Interface representation of House Builder Design Pattern
     """
 
     @staticmethod
