@@ -22,6 +22,7 @@ class MongoDB:
 if __name__ == "__main__":
     mongo_db_conn1 = MongoDB(1)
     mongo_db_conn2 = MongoDB(2)
+    # this will throw error as MongoDB it will treat as function not a class
     # MongoDB.mongo_db_class_method(5)
 
     print(mongo_db_conn1 == mongo_db_conn2)
