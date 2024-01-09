@@ -16,30 +16,26 @@ class SingletonMetaClass(type):
         return cls._instances[cls]
 
 
-class Student(metaclass=SingletonMetaClass):
-    """This is a singleton class for student instances"""
+class MongoDB(metaclass=SingletonMetaClass):
+    """This is a MongoDB db conn singleton class"""
 
-    def __init__(self, *args, **kwargs):
-        self.first_name = args[0]
-        self.last_name = args[1]
+    def __init__(self, number):
+        self.number = number
 
     def __str__(self):
-        return f"{self.first_name} {self.last_name}"
+        return f"MongoDB connection no {self.number}"
 
     def business_logic(self):
-        print(f"This is the business logic of the singleton class {self.first_name} {self.last_name}")
+        print(f"MongoDB connection no {self.number}")
 
 
-student1 = Student("Ajay", "Biswas")
-student2 = Student("Amit", "Roy")
+mongoDB_conn1 = MongoDB(23)
+mongoDB_conn2 = MongoDB(47)
 
-if id(student1) == id(student2):
-    print("Singleton worked,Both the instances are same")
-else:
-    print("Singleton failed,Both the instances are different")
-
-thread1 = threading.Thread(target=student1.business_logic)
-thread2 = threading.Thread(target=student2.business_logic)
+thread1 = threading.Thread(target=mongoDB_conn1.business_logic)
+thread2 = threading.Thread(target=mongoDB_conn2.business_logic)
 
 thread1.start()
 thread2.start()
+
+print(id(mongoDB_conn1) == id(mongoDB_conn2))
