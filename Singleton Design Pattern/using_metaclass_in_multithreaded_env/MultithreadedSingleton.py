@@ -1,7 +1,7 @@
 import threading
 
 
-class StudentSingletonMetaClass(type):
+class SingletonMetaClass(type):
     """This is a metaclass that will be used to create singleton classes for student instances"""
 
     _instances = {}
@@ -12,11 +12,11 @@ class StudentSingletonMetaClass(type):
         if cls not in cls._instances:
             with cls._lock:
                 if cls not in cls._instances:
-                    cls._instances[cls] = super(StudentSingletonMetaClass, cls).__call__(*args, **kwargs)
+                    cls._instances[cls] = super(SingletonMetaClass, cls).__call__(*args, **kwargs)
         return cls._instances[cls]
 
 
-class StudentSingleton(metaclass=StudentSingletonMetaClass):
+class Student(metaclass=SingletonMetaClass):
     """This is a singleton class for student instances"""
 
     def __init__(self, *args, **kwargs):
@@ -30,8 +30,13 @@ class StudentSingleton(metaclass=StudentSingletonMetaClass):
         print(f"This is the business logic of the singleton class {self.first_name} {self.last_name}")
 
 
-student1 = StudentSingleton("Ajay", "Biswas")
-student2 = StudentSingleton("Amit", "Roy")
+student1 = Student("Ajay", "Biswas")
+student2 = Student("Amit", "Roy")
+
+if id(student1) == id(student2):
+    print("Singleton worked,Both the instances are same")
+else:
+    print("Singleton failed,Both the instances are different")
 
 thread1 = threading.Thread(target=student1.business_logic)
 thread2 = threading.Thread(target=student2.business_logic)
