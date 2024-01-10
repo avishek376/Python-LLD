@@ -19,12 +19,15 @@ class StudentSingleton(metaclass=StudentSingletonMeta):
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
 
+    def business_logic(self):
+        return f"{self.first_name} {self.last_name}"
+
 
 student1 = StudentSingleton("Ajay", "Biswas")
 student2 = StudentSingleton("Amit", "Roy")
 
-print((student1))
-print((student2))
+print((student1.business_logic()))
+print((student2.business_logic()))
 
 if id(student1) == id(student2):
     print("Singleton worked,Both the instances are same")
