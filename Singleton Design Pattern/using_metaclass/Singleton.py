@@ -20,7 +20,7 @@ class StudentSingleton(metaclass=StudentSingletonMeta):
     #     return f"{self.first_name} {self.last_name}"
 
     def business_logic(self):
-        return f"{self.first_name} {self.last_name}"
+        return f"Business logic updated by:: {self.first_name} {self.last_name}"
 
 
 student1 = StudentSingleton("Ajay", "Biswas")
