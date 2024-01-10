@@ -16,8 +16,8 @@ class StudentSingleton(metaclass=StudentSingletonMeta):
         self.first_name = args[0]
         self.last_name = args[1]
 
-    def __str__(self):
-        return f"{self.first_name} {self.last_name}"
+    # def __str__(self):
+    #     return f"{self.first_name} {self.last_name}"
 
     def business_logic(self):
         return f"{self.first_name} {self.last_name}"
