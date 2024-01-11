@@ -3,6 +3,8 @@ from Product import *
 
 
 class Builder(IBuilder):
+    """This is a Builder concrete class implements IBuilder interface"""
+
     def __init__(self):
         self.product = Product()
 

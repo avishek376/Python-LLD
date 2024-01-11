@@ -3,6 +3,7 @@ from Product import *
 
 
 class Director:
+    """This class creates the Product based on client requirement"""
 
     @staticmethod
     def construct():
