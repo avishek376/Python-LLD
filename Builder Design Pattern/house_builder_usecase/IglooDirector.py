@@ -10,5 +10,5 @@ class IglooDirector:
             set_building_type("Igloo"). \
             set_house_material("Snow"). \
             set_doors(1). \
-            set_windows(1). \
+            set_windows(2). \
             get_house()
