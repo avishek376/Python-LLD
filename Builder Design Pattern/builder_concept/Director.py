@@ -1,5 +1,4 @@
 from Builder import *
-from Product import *
 
 
 class Director:
