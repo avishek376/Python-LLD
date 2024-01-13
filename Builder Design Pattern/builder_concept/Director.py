@@ -7,4 +7,4 @@ class Director:
 
     @staticmethod
     def construct():
-        return Builder().get_builder_a().get_builder_b().get_builder_c().get_product()
+        return Builder().build_part_a().build_part_b().build_part_c().get_product()

@@ -8,15 +8,15 @@ class Builder(IBuilder):
     def __init__(self):
         self.product = Product()
 
-    def get_builder_a(self):
+    def build_part_a(self):
         self.product.parts.append('a')
         return self
 
-    def get_builder_b(self):
+    def build_part_b(self):
         self.product.parts.append('b')
         return self
 
-    def get_builder_c(self):
+    def build_part_c(self):
         self.product.parts.append('c')
         return self
 

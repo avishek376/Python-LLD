@@ -6,17 +6,17 @@ class IBuilder(metaclass=ABCMeta):
 
     @staticmethod
     @abstractmethod
-    def get_builder_a():
+    def build_part_a():
         pass
 
     @staticmethod
     @abstractmethod
-    def get_builder_b():
+    def build_part_b():
         pass
 
     @staticmethod
     @abstractmethod
-    def get_builder_c():
+    def build_part_c():
         pass
 
     @staticmethod
