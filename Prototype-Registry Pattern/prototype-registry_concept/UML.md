@@ -1,0 +1,1 @@
+![Prototype Design Pattern.png](Prototype Design Pattern.png)
