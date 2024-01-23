@@ -9,6 +9,5 @@ class PayPalAPI:
         return True
 
     def paypal_refund(self, amount):
-        print(f"Rfund of {amount} made with PayPal")
+        print(f"Refund of {amount} made with PayPal")
         return True
-
