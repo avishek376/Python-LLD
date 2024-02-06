@@ -2,5 +2,9 @@ from AbstractFurnitureFactory import FurnitureFactory as AbsFactory
 
 
 class Client:
-    table = AbsFactory().get_furniture("true-chair")
-    print(table.create())
+    try:
+        table = AbsFactory().get_furniture("normal-chair")
+        if table:
+            print(table.create())
+    except ValueError as e:
+        print(e)
