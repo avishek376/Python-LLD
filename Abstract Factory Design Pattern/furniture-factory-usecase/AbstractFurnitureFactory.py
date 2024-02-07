@@ -12,7 +12,7 @@ class FurnitureFactory(IFurniture):
         try:
             if furniture_type in ["modern-chair", "victorian-chair", "normal-chair"]:
                 return ChairFactory().get_chair(furniture_type)
-            elif furniture_type in ["coffee-table", "victorian-table", "normal-table"]:
+            elif furniture_type in ["modern-table", "victorian-table", "normal-table"]:
                 return TableFactory().get_table(furniture_type)
 
             raise ValueError("Furniture not found")
