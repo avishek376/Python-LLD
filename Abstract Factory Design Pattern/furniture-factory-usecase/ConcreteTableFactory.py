@@ -1,4 +1,6 @@
 from ConcreteVictorianTable import VictorianTable
+from ConcreteNormalTable import NormalTable
+from ConcreteModernTable import ModernTable
 
 
 class TableFactory:
@@ -11,12 +13,12 @@ class TableFactory:
     def get_table(table_type):
         """This is static Factory Method...return Table Factory Instances"""
         try:
-            if table_type in ["victorian-table"]:
+            if table_type == "victorian-table":
                 return VictorianTable()
-            elif table_type in ["modern-table"]:
-                return None
-            elif table_type in ["normal-table"]:
-                return None
+            elif table_type == "modern-table":
+                return ModernTable()
+            elif table_type == "normal-table":
+                return NormalTable()
             raise ValueError("Table not found")
         except ValueError as e:
             print(e)
