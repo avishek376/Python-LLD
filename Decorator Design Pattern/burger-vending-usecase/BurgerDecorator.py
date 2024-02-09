@@ -4,7 +4,7 @@ from Burger import Burger
 class BurgerDecorator(Burger):
     """"This class is the Base Decorator of Burger interface"""
 
-    def __init__(self, burger):
+    def __init__(self, burger: Burger):
         self._burger = burger
 
     def get_cost(self):
@@ -12,5 +12,3 @@ class BurgerDecorator(Burger):
 
     def get_description(self):
         return self._burger.get_description()
-
-    
