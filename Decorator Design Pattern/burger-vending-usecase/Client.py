@@ -5,9 +5,12 @@ from ConcreteBurgerComponent import BurgerComponent
 
 if __name__ == "__main__":
     burger = BurgerComponent()
+    extra_veggie_burger = ExtraVeggieBurger(burger)
     extra_cheese_burger = ExtraCheeseBurger(burger)
-    print(burger.get_cost())
-    print(extra_cheese_burger.get_description())
-    extra_veggie_burger = ExtraVeggieBurger(extra_cheese_burger)
-    print(extra_veggie_burger.get_cost())
-    print(extra_veggie_burger.get_description())
+    mixed_burger = ExtraCheeseBurger(ExtraVeggieBurger(burger))
+
+    print(burger.get_cost(), " | ", burger.get_description())
+    print(extra_veggie_burger.get_cost(), " | ", extra_veggie_burger.get_description())
+    print(extra_cheese_burger.get_cost(), " | ", extra_cheese_burger.get_description())
+    print(mixed_burger.get_cost(), " | ", mixed_burger.get_description())
+
