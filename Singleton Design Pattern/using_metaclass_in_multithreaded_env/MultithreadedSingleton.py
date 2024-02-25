@@ -2,7 +2,7 @@ import threading
 
 
 class SingletonMetaClass(type):
-    """This is a metaclass that will be used to create singleton classes for student instances"""
+    """This is a metaclass that will be used to create singleton_by_metaclass classes for student instances"""
 
     _instances = {}
     _lock = threading.Lock()
@@ -17,7 +17,7 @@ class SingletonMetaClass(type):
 
 
 class MongoDB(metaclass=SingletonMetaClass):
-    """This is a MongoDB db conn singleton class"""
+    """This is a MongoDB db conn singleton_by_metaclass class"""
 
     def __init__(self, number):
         self.number = number

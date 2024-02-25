@@ -1,5 +1,5 @@
 class StudentSingletonMeta(type):
-    """This is a metaclass that will be used to create singleton classes"""
+    """This is a metaclass that will be used to create singleton_by_metaclass classes"""
     _instances = {}
 
     def __call__(cls, *args, **kwargs):
@@ -10,7 +10,7 @@ class StudentSingletonMeta(type):
 
 
 class StudentSingleton(metaclass=StudentSingletonMeta):
-    """This is a singleton class"""
+    """This is a singleton_by_metaclass class"""
 
     def __init__(self, *args, **kwargs):
         self.first_name = args[0]
