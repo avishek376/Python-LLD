@@ -5,7 +5,7 @@ class MongoDB:
 
     def __new__(cls):
         if cls._instances is None:
-            # If the  is not created then create the instance
+            # If the instance is not created then create the instance
             # call the __new__ method of the super class
             cls._instances = super().__new__(cls)
         return cls._instances
