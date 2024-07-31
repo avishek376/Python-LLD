@@ -30,4 +30,4 @@ print(logger1 is logger2)  # True, proving both are the same instance
 
 # Log some messages
 logger1.log("This is a log message.")
-logger2.log("This is another log message.")
+logger2.log("This is another log message...")
